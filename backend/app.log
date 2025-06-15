@@ -1,0 +1,568 @@
+2025-06-13 11:52:51,359 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 11:52:51,418 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 11:53:03,597 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 11:53:10,862 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 11:53:10,914 - app.services.vector_store - ERROR - Error adding batch 1: Expected metadata value to be a str, int, or float, got None
+2025-06-13 11:53:10,914 - app.services.vector_store - ERROR - Error in add_to_vector_store: Expected metadata value to be a str, int, or float, got None
+2025-06-13 11:53:10,914 - app.routes.document_router - ERROR - Error uploading document: Expected metadata value to be a str, int, or float, got None
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\document_router.py", line 52, in upload_document
+    add_to_vector_store(
+  File "D:\chatbot_theme_identifier\backend\app\services\vector_store.py", line 62, in add_to_vector_store
+    collection.add(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 101, in add
+    ids, embeddings, metadatas, documents = self._validate_embedding_set(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 355, in _validate_embedding_set
+    validate_metadatas(maybe_cast_one_to_many(metadatas))
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 120, in validate_metadatas
+    validate_metadata(metadata)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 109, in validate_metadata
+    raise ValueError(
+ValueError: Expected metadata value to be a str, int, or float, got None
+2025-06-13 11:53:13,055 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:08:11,674 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:08:29,190 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:08:34,891 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:08:34,902 - app.services.vector_store - ERROR - Error adding batch 1: Expected metadata value to be a str, int, or float, got None
+2025-06-13 12:08:34,903 - app.services.vector_store - ERROR - Error in add_to_vector_store: Expected metadata value to be a str, int, or float, got None
+2025-06-13 12:08:34,903 - app.routes.document_router - ERROR - Error uploading document: Expected metadata value to be a str, int, or float, got None
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\document_router.py", line 52, in upload_document
+    add_to_vector_store(
+  File "D:\chatbot_theme_identifier\backend\app\services\vector_store.py", line 62, in add_to_vector_store
+    collection.add(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 101, in add
+    ids, embeddings, metadatas, documents = self._validate_embedding_set(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 355, in _validate_embedding_set
+    validate_metadatas(maybe_cast_one_to_many(metadatas))
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 120, in validate_metadatas
+    validate_metadata(metadata)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 109, in validate_metadata
+    raise ValueError(
+ValueError: Expected metadata value to be a str, int, or float, got None
+2025-06-13 12:08:37,000 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:16:06,879 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:16:06,880 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 12:16:07,648 - app.services.vector_store - ERROR - Error adding batch 1: Expected metadata value to be a str, int, or float, got None
+2025-06-13 12:16:07,648 - app.services.vector_store - ERROR - Error in add_to_vector_store: Expected metadata value to be a str, int, or float, got None
+2025-06-13 12:16:07,648 - app.routes.document_router - ERROR - Error uploading document: Expected metadata value to be a str, int, or float, got None
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\document_router.py", line 51, in upload_document
+    add_to_vector_store(
+  File "D:\chatbot_theme_identifier\backend\app\services\vector_store.py", line 62, in add_to_vector_store
+    collection.add(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 101, in add
+    ids, embeddings, metadatas, documents = self._validate_embedding_set(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 355, in _validate_embedding_set
+    validate_metadatas(maybe_cast_one_to_many(metadatas))
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 120, in validate_metadatas
+    validate_metadata(metadata)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 109, in validate_metadata
+    raise ValueError(
+ValueError: Expected metadata value to be a str, int, or float, got None
+2025-06-13 12:16:10,728 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:18:00,373 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:18:11,787 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:18:19,082 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 12:25:11,313 - chromadb.db.duckdb - INFO - Exiting: Cleaning up .chroma directory
+2025-06-13 15:27:30,940 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:27:30,964 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:27:30,964 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:27:41,037 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:27:45,077 - app.routes.document_router - ERROR - Error processing file AdmitCard-253510048532.pdf: chunk_text_with_paragraphs() takes from 1 to 2 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\document_router.py", line 37, in process_and_store_file
+    chunks, ids, metadatas = chunk_text_with_paragraphs(
+TypeError: chunk_text_with_paragraphs() takes from 1 to 2 positional arguments but 4 were given
+2025-06-13 15:27:47,183 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:29:17,153 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:29:17,175 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:29:17,175 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:33:46,605 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:33:47,186 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:33:47,186 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:34:41,794 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:34:54,673 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:34:58,315 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:38:00,842 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:38:00,856 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:38:00,856 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:38:04,958 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:41:35,351 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:41:35,357 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:41:35,357 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:41:39,040 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:46:37,298 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:46:37,324 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:46:37,324 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:46:41,730 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:53:12,989 - app.services.vector_store - INFO - Collection 'theme_docs' not found. Creating new one.
+2025-06-13 15:53:13,010 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:53:13,010 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 15:53:16,308 - app.routes.document_router - INFO - Received file: Synopsis_Miscro-dopler_by_deepak_shrivas.pdf
+2025-06-13 15:53:16,311 - app.routes.document_router - INFO - Saved file at: uploads\Synopsis_Miscro-dopler_by_deepak_shrivas.pdf
+2025-06-13 15:53:16,912 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Synopsis_Miscro-dopler_by_deepak_shrivas.pdf', 'file_type': 'pdf', 'file_size': 867459, 'page_count': 17, 'word_count': 2614}
+2025-06-13 15:53:16,971 - app.routes.document_router - INFO - Extracted text length: 21571
+2025-06-13 15:53:16,978 - app.routes.document_router - INFO - Chunked into 7 parts
+2025-06-13 15:53:16,989 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 15:56:38,611 - app.routes.document_router - INFO - Received file: Synopsis_Miscro-dopler_by_deepak_shrivas.pdf
+2025-06-13 15:56:38,611 - app.routes.document_router - INFO - Saved file at: uploads\Synopsis_Miscro-dopler_by_deepak_shrivas.pdf
+2025-06-13 15:56:39,192 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Synopsis_Miscro-dopler_by_deepak_shrivas.pdf', 'file_type': 'pdf', 'file_size': 867459, 'page_count': 17, 'word_count': 2614}
+2025-06-13 15:56:39,234 - app.routes.document_router - INFO - Extracted text length: 21571
+2025-06-13 15:56:39,235 - app.routes.document_router - INFO - Chunked into 7 parts
+2025-06-13 15:56:39,246 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 16:00:09,487 - app.services.vector_store - INFO - Created collection 'theme_docs' with custom embedding_function.
+2025-06-13 16:00:35,074 - app.routes.document_router - INFO - Received file: Project_Report(2025).pdf
+2025-06-13 16:00:35,085 - app.routes.document_router - INFO - Saved file at: uploads\Project_Report(2025).pdf
+2025-06-13 16:00:35,338 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Project_Report(2025).pdf', 'file_type': 'pdf', 'file_size': 1382720, 'page_count': 111, 'word_count': 12983}
+2025-06-13 16:00:35,439 - app.routes.document_router - INFO - Extracted text length: 95958
+2025-06-13 16:00:35,439 - app.routes.document_router - INFO - Chunked into 31 parts
+2025-06-13 16:00:35,454 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 16:00:35,454 - app.services.vector_store - WARNING - Collection 'theme_docs' exists without embedding_function. Recreating it.
+2025-06-13 16:00:35,456 - app.services.vector_store - INFO - Created collection 'theme_docs' with custom embedding_function.
+2025-06-13 16:11:39,872 - chromadb.db.duckdb - INFO - Exiting: Cleaning up .chroma directory
+2025-06-13 16:30:31,879 - app.services.vector_store - INFO - Checked for existing collections in 0.03 seconds
+2025-06-13 16:30:31,911 - app.services.vector_store - INFO - Created collection 'theme_docs' with embedding_function in 0.06 seconds
+2025-06-13 16:30:55,553 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 16:30:55,555 - app.services.vector_store - INFO - Checked for existing collections in 0.02 seconds
+2025-06-13 16:30:55,555 - app.services.vector_store - WARNING - Collection 'theme_docs' exists. Deleting to ensure embedding_function is attached.
+2025-06-13 16:30:55,603 - app.services.vector_store - INFO - Created collection 'theme_docs' with embedding_function in 0.07 seconds
+2025-06-13 16:30:58,969 - app.routes.document_router - INFO - Received file: Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 16:30:58,988 - app.routes.document_router - INFO - Saved file at: uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 16:30:59,168 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Synopsis_Miscro-dopler_(1)[1].docx', 'file_type': 'docx', 'file_size': 2990755, 'page_count': 2, 'word_count': 2353}
+2025-06-13 16:30:59,184 - app.routes.document_router - INFO - Extracted text length: 17899
+2025-06-13 16:30:59,184 - app.routes.document_router - INFO - Chunked into 6 parts
+2025-06-13 16:30:59,199 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 16:30:59,201 - app.services.vector_store - INFO - Checked for existing collections in 0.02 seconds
+2025-06-13 16:30:59,201 - app.services.vector_store - WARNING - Collection 'theme_docs' exists. Deleting to ensure embedding_function is attached.
+2025-06-13 16:30:59,207 - app.services.vector_store - INFO - Created collection 'theme_docs' with embedding_function in 0.02 seconds
+2025-06-13 16:34:21,770 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs'
+2025-06-13 16:34:46,581 - app.routes.document_router - INFO - Received file: Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 16:34:46,581 - app.routes.document_router - INFO - Saved file at: uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 16:34:46,731 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Synopsis_Miscro-dopler_(1)[1].docx', 'file_type': 'docx', 'file_size': 2990755, 'page_count': 2, 'word_count': 2353}
+2025-06-13 16:34:46,748 - app.routes.document_router - INFO - Extracted text length: 17899
+2025-06-13 16:34:46,765 - app.routes.document_router - INFO - Chunked into 6 parts
+2025-06-13 16:34:46,768 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 16:34:46,768 - app.services.vector_store - INFO - [get_chroma_collection] Loading existing collection 'theme_docs' with embedding_function
+2025-06-13 16:39:02,340 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs'
+2025-06-13 16:39:04,965 - app.routes.document_router - INFO - Received file: Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 16:39:04,968 - app.routes.document_router - INFO - Saved file at: uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 16:39:05,262 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Synopsis_Miscro-dopler_(1)[1].docx', 'file_type': 'docx', 'file_size': 2990755, 'page_count': 2, 'word_count': 2353}
+2025-06-13 16:39:05,287 - app.routes.document_router - INFO - Extracted text length: 17899
+2025-06-13 16:39:05,299 - app.routes.document_router - INFO - Chunked into 6 parts
+2025-06-13 16:39:05,305 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 16:39:05,305 - app.services.vector_store - WARNING - [get_chroma_collection] Force recreating collection 'theme_docs'
+2025-06-13 17:01:48,740 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs'
+2025-06-13 17:02:03,694 - app.routes.document_router - INFO - Received file: Synopsis_Miscro-dopler_by_deepak_shrivas.pdf
+2025-06-13 17:02:03,702 - app.routes.document_router - INFO - Saved file at: uploads\Synopsis_Miscro-dopler_by_deepak_shrivas.pdf
+2025-06-13 17:02:04,906 - app.routes.document_router - INFO - Metadata extracted: {'filename': 'Synopsis_Miscro-dopler_by_deepak_shrivas.pdf', 'file_type': 'pdf', 'file_size': 867459, 'page_count': 17, 'word_count': 2614}
+2025-06-13 17:02:04,992 - app.routes.document_router - INFO - Extracted text length: 21571
+2025-06-13 17:02:05,004 - app.routes.document_router - INFO - Chunked into 7 parts
+2025-06-13 17:22:51,356 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:22:51,369 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 17:23:02,254 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:23:02,257 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:23:05,580 - app.ingestion.utils - INFO - Processing file: uploads\Synopsis_deepak_shrivas.pdf
+2025-06-13 17:23:11,240 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:23:11,242 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:23:11,243 - app.services.vector_store - ERROR - Error adding batch 1: Expected metadata value to be a str, int, or float, got None
+2025-06-13 17:23:11,245 - app.services.vector_store - ERROR - Error in add_to_vector_store: Expected metadata value to be a str, int, or float, got None
+2025-06-13 17:23:11,252 - app.routes.document_router - ERROR - Error uploading document: Expected metadata value to be a str, int, or float, got None
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\document_router.py", line 41, in upload_document
+    add_to_vector_store(
+  File "D:\chatbot_theme_identifier\backend\app\services\vector_store.py", line 61, in add_to_vector_store
+    collection.add(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 101, in add
+    ids, embeddings, metadatas, documents = self._validate_embedding_set(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 355, in _validate_embedding_set
+    validate_metadatas(maybe_cast_one_to_many(metadatas))
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 120, in validate_metadatas
+    validate_metadata(metadata)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\types.py", line 109, in validate_metadata
+    raise ValueError(
+ValueError: Expected metadata value to be a str, int, or float, got None
+2025-06-13 17:23:13,407 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:23:13,408 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:24:37,954 - app.routes.document_router - INFO - Extracting text from D:\chatbot_theme_identifier\backend\uploads\Synopsis_deepak_shrivas.pdf
+2025-06-13 17:24:37,963 - app.ingestion.utils - INFO - Processing file: D:\chatbot_theme_identifier\backend\uploads\Synopsis_deepak_shrivas.pdf
+2025-06-13 17:24:41,847 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:24:41,851 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 17:24:42,835 - app.services.vector_store - ERROR - Error adding batch 1: Expected metadata value to be a str, int, or float, got None
+2025-06-13 17:24:42,839 - app.services.vector_store - ERROR - Error in add_to_vector_store: Expected metadata value to be a str, int, or float, got None
+2025-06-13 17:24:42,840 - app.routes.document_router - ERROR - Error adding to vector store: Expected metadata value to be a str, int, or float, got None
+2025-06-13 17:24:44,936 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:24:44,936 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:25:12,915 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:25:12,921 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:25:17,393 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:25:17,399 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:25:17,420 - app.services.query_llm - ERROR - Error in retrieving context
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:25:17,846 - app.services.query_llm - ERROR - Error in answer_query_with_context: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:25:17,853 - app.routes.query_router - ERROR - Error processing query: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\query_router.py", line 78, in handle_query
+    response = answer_query_with_context(
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 91, in answer_query_with_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:34:32,965 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:34:32,993 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 17:34:42,272 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:34:42,273 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:34:46,047 - app.routes.document_router - INFO - Extracting text from D:\chatbot_theme_identifier\backend\uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 17:34:46,054 - app.ingestion.utils - INFO - Processing file: D:\chatbot_theme_identifier\backend\uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 17:34:46,233 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:34:46,233 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:34:48,851 - app.services.vector_store - INFO - Successfully added batch 1 to collection theme_docs
+2025-06-13 17:34:50,902 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:34:50,902 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:35:35,635 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:35:35,636 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:35:38,341 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:35:38,342 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:35:38,354 - app.services.query_llm - ERROR - Error in retrieving context
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 248, in get_nearest_neighbors
+    raise NotEnoughElementsException(
+chromadb.errors.NotEnoughElementsException: Number of requested results 5 cannot be greater than number of elements in index 1
+2025-06-13 17:35:38,426 - app.services.query_llm - ERROR - Error in answer_query_with_context: Number of requested results 5 cannot be greater than number of elements in index 1
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 248, in get_nearest_neighbors
+    raise NotEnoughElementsException(
+chromadb.errors.NotEnoughElementsException: Number of requested results 5 cannot be greater than number of elements in index 1
+2025-06-13 17:35:38,467 - app.routes.query_router - ERROR - Error processing query: Number of requested results 5 cannot be greater than number of elements in index 1
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\query_router.py", line 78, in handle_query
+    response = answer_query_with_context(
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 91, in answer_query_with_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 248, in get_nearest_neighbors
+    raise NotEnoughElementsException(
+chromadb.errors.NotEnoughElementsException: Number of requested results 5 cannot be greater than number of elements in index 1
+2025-06-13 17:37:50,147 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:38:04,299 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 17:38:08,425 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:38:08,429 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:38:08,449 - app.services.query_llm - ERROR - Error in retrieving context
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:38:08,551 - app.services.query_llm - ERROR - Error in answer_query_with_context: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:38:08,561 - app.routes.query_router - ERROR - Error processing query: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\query_router.py", line 78, in handle_query
+    response = answer_query_with_context(
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 91, in answer_query_with_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:40:27,185 - app.routes.document_router - INFO - Extracting text from D:\chatbot_theme_identifier\backend\uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 17:40:27,187 - app.ingestion.utils - INFO - Processing file: D:\chatbot_theme_identifier\backend\uploads\Synopsis_Miscro-dopler_(1)[1].docx
+2025-06-13 17:40:27,573 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:40:47,929 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 17:40:54,078 - app.services.vector_store - INFO - Successfully added batch 1 to collection theme_docs
+2025-06-13 17:40:56,372 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:40:56,376 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:41:04,615 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:41:04,620 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:41:06,701 - chromadb.db.duckdb - INFO - collection with name theme_docs already exists, returning existing collection
+2025-06-13 17:41:06,706 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:41:06,710 - app.services.query_llm - ERROR - Error in retrieving context
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 248, in get_nearest_neighbors
+    raise NotEnoughElementsException(
+chromadb.errors.NotEnoughElementsException: Number of requested results 5 cannot be greater than number of elements in index 1
+2025-06-13 17:41:06,743 - app.services.query_llm - ERROR - Error in answer_query_with_context: Number of requested results 5 cannot be greater than number of elements in index 1
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 248, in get_nearest_neighbors
+    raise NotEnoughElementsException(
+chromadb.errors.NotEnoughElementsException: Number of requested results 5 cannot be greater than number of elements in index 1
+2025-06-13 17:41:06,750 - app.routes.query_router - ERROR - Error processing query: Number of requested results 5 cannot be greater than number of elements in index 1
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\query_router.py", line 78, in handle_query
+    response = answer_query_with_context(
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 91, in answer_query_with_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 248, in get_nearest_neighbors
+    raise NotEnoughElementsException(
+chromadb.errors.NotEnoughElementsException: Number of requested results 5 cannot be greater than number of elements in index 1
+2025-06-13 17:48:23,583 - app.routes.document_router - ERROR - Error uploading document: 
+2025-06-13 17:50:05,516 - app.routes.document_router - ERROR - Error uploading document: 
+2025-06-13 17:53:40,738 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:53:42,971 - app.routes.document_router - ERROR - Error uploading document: 
+2025-06-13 17:53:51,827 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:54:25,162 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-13 17:54:27,493 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:54:27,756 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:54:53,228 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:54:53,230 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:54:54,134 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:11,178 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:11,183 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:11,202 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:11,365 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:11,365 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:11,384 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:15,600 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:15,603 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:15,609 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:15,716 - app.services.query_llm - ERROR - Error in retrieving context
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:55:15,876 - app.services.query_llm - ERROR - Error in answer_query_with_context: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:55:15,887 - app.routes.query_router - ERROR - Error processing query: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\query_router.py", line 79, in handle_query
+    response = answer_query_with_context(
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 91, in answer_query_with_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:55:27,040 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:27,045 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:27,052 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:30,180 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:30,181 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:30,190 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:32,359 - app.routes.document_router - ERROR - Error uploading document: 
+2025-06-13 17:55:42,553 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:42,553 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:42,563 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:46,669 - chromadb.api.models.Collection - WARNING - No embedding_function provided, using default embedding function: SentenceTransformerEmbeddingFunction
+2025-06-13 17:55:46,672 - app.services.vector_store - INFO - [get_chroma_collection] Deleting existing collection 'theme_docs'
+2025-06-13 17:55:46,679 - app.services.vector_store - INFO - [get_chroma_collection] Creating new collection 'theme_docs' with embedding_function
+2025-06-13 17:55:46,704 - app.services.query_llm - ERROR - Error in retrieving context
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:55:46,713 - app.services.query_llm - ERROR - Error in answer_query_with_context: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying
+2025-06-13 17:55:46,722 - app.routes.query_router - ERROR - Error processing query: Index not found, please create an instance before querying
+Traceback (most recent call last):
+  File "D:\chatbot_theme_identifier\backend\app\routes\query_router.py", line 79, in handle_query
+    response = answer_query_with_context(
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 91, in answer_query_with_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 72, in answer_query_with_context
+    context_chunks, sources = retrieve_context(user_query, collection_name)
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 47, in retrieve_context
+    raise e
+  File "D:\chatbot_theme_identifier\backend\app\services\query_llm.py", line 25, in retrieve_context
+    results = collection.query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\models\Collection.py", line 227, in query
+    return self._client._query(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\api\local.py", line 437, in _query
+    uuids, distances = self._db.get_nearest_neighbors(
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\clickhouse.py", line 585, in get_nearest_neighbors
+    uuids, distances = index.get_nearest_neighbors(embeddings, n_results, ids)
+  File "D:\chatbot_theme_identifier\backend\venv-b\lib\site-packages\chromadb\db\index\hnswlib.py", line 240, in get_nearest_neighbors
+    raise NoIndexException(
+chromadb.errors.NoIndexException: Index not found, please create an instance before querying

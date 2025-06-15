@@ -1,0 +1,55 @@
+chatbot_analyzer/
+├── backend/
+│   ├── app/
+│   │   ├── api/                          # FastAPI routes
+│   │   │   ├── document_router.py        # Upload, delete, list files
+│   │   │   └── query_router.py           # Query handler + citations
+│   │   ├── services/                     # Business logic
+│   │   │   ├── extractor.py              # File-type-based text extraction
+│   │   │   ├── embedding.py              # Embedding + Chroma vector logic
+│   │   │   ├── citation.py               # Citation table generator
+│   │   │   └── file_manager.py           # File save/delete logic
+│   │   ├── ingestion/                    # File preprocessing utils
+│   │   │   ├── ocr_utils.py              # EasyOCR/Tesseract handlers
+│   │   │   ├── pdf_utils.py              # PyMuPDF/pdfplumber logic
+│   │   │   ├── docx_utils.py             # python-docx logic
+│   │   │   └── utils.py                  # Text cleaner / para splitter
+│   │   │   └── manager.py
+│   │   ├── core/                         # Core configs
+│   │   │   ├── config.py                 # env variables, constants
+│   │   │   ├── logger.py                 # Logger setup
+│   │   │   └── celery_worker.py          # Celery app init
+│   │   ├── database/                     # DB & Vector DB logic
+│   │   │   ├── chroma_manager.py         # ChromaDB logic
+│   │   │   ├── models.py                 # SQLAlchemy models (SQLite)
+│   │   │   ├── crud.py                   # DB access methods
+│   │   │   └── db.py                     # DB engine/session factory
+│   │   ├── tasks/                        # Celery tasks
+│   │   │   └── ingestion_tasks.py        # Embedding / OCR background jobs
+│   │   └── main.py                       # FastAPI entrypoint
+│   └── Dockerfile
+│
+├── frontend/                              # UI in Streamlit or HTML/JS
+│   ├── streamlit_app.py
+│   ├── components/                       # Custom file upload, viewer, sorter
+│   └── Dockerfile
+│
+├── logs/                                  # Logging all app activities
+│   ├── backend.log
+│   ├── ingestion.log
+│   ├── query.log
+│   └── celery.log
+│
+├── celery_worker/                         # Optional: separate Celery service
+│   ├── worker.py
+│   └── Dockerfile
+│
+├── data/                                  # App data
+│   ├── uploads/                           # Saved files
+│   └── db.sqlite                          # SQLite DB file
+│
+├── docker-compose.yml                     # One-click launch infra
+├── .env                                   # App environment variables
+├── requirements.txt                       # Backend dependencies
+├── README.md
+└── .gitignore
