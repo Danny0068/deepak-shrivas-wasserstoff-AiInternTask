@@ -17,7 +17,7 @@ def docs_to_text_with_citaitons(path:str, document_name: str, user_id:str)-> lis
         text = para.text.strip()
         style = para.style.name.lower()
         if not text:
-            black_count +=1 
+            blank_count +=1 
             continue 
         else:
             blank_count = 0
