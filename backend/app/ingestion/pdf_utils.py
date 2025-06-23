@@ -1,43 +1,49 @@
 import fitz  # PyMuPDF
 
-def extract_text_with_citations_from_pdf(path: str, document_name: str, user_id: str) -> list[dict]:
+def extract_text_with_citations_from_pdf(path: str, document_name: str = "", user_id: str = "") -> list[dict]:
     """
-    Extracts paragraph-level text blocks from a PDF with user and document metadata.
+    Extract text from a PDF with page and paragraph numbers, and optionally group lines into logical paragraphs.
 
     Args:
-        path (str): Path to the PDF.
-        document_name (str): Logical name of the document (for grouping).
-        user_id (str): ID of the user who uploaded the document.
+        path (str): Path to the PDF file.
+        document_name (str): Optional document name.
+        user_id (str): Optional user ID.
 
     Returns:
-        List[dict]: Each dict contains 'user_id', 'document_name', 'page', 'paragraph', 'text'.
+        List[dict]: List of extracted text chunks with citation metadata.
     """
     doc = fitz.open(path)
     results = []
+    group_lines_into_paragraphs = True  # Toggle this for finer paragraph merging
 
     for page_num, page in enumerate(doc, start=1):
-        try:
-            # Extract blocks and sort top-down, left-right
-            blocks = page.get_text("blocks")
-            blocks = sorted(blocks, key=lambda b: (b[1], b[0]))  # sort by y, then x
+        text = page.get_text()
+        raw_lines = [line.strip() for line in text.split("\n")]
+        
+        # Filter empty/noisy lines
+        lines = [line for line in raw_lines if line and (len(line) > 3 or any(char.isalnum() for char in line))]
 
-            for para_num, block in enumerate(blocks, start=1):
-                text = block[4].strip()
-                if text:
-                    results.append({
-                        "user_id": user_id,
-                        "document_name": document_name,
-                        "page": page_num,
-                        "paragraph": para_num,
-                        "text": text
-                    })
-        except Exception as e:
+        # Optionally group short lines into logical paragraphs
+        if group_lines_into_paragraphs:
+            paragraphs = []
+            buffer = []
+            for line in lines:
+                buffer.append(line)
+                if len(" ".join(buffer)) > 80:  # You can tune this threshold
+                    paragraphs.append(" ".join(buffer))
+                    buffer = []
+            if buffer:
+                paragraphs.append(" ".join(buffer))
+        else:
+            paragraphs = lines
+
+        for para_num, para_text in enumerate(paragraphs, start=1):
             results.append({
                 "user_id": user_id,
                 "document_name": document_name,
                 "page": page_num,
-                "paragraph": -1,
-                "text": f"[ERROR extracting text on page {page_num}: {str(e)}]"
+                "paragraph": para_num,
+                "text": para_text
             })
 
     return results
