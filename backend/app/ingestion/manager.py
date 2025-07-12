@@ -1,63 +1,65 @@
+import os
+import logging
+from typing import List, Dict
 from pathlib import Path
-import shutil
-from .convert_to_pdf_utils import convert_image_to_pdf
-from .pdf_utils import extract_text_with_citations_from_pdf
-from .docs_utils import docs_to_text_with_citaitons
-from .utils import (
-    get_file_hash,
-    format_file_size,
-    get_file_metadata,
-    ensure_dir,
-    sanitize_filename,
-    is_supported_file
-)
+from .pdf_parser import parse_pdf
+from .docs_parser import parse_docx
+from .ocr_parser import parse_ocr_file
 
-STORAGE_DIR = "filestorage"
+logger = logging.getLogger(__name__)
 
-def process_file(file_path: str, user_id: str) -> dict:
-    file_path = Path(file_path)
+SUPPORTED_FILE_TYPES = {
+    ".pdf": "pdf",
+    ".docx": "docx",
+    ".jpeg": "image",
+    ".jpg": "image",
+    ".png": "image",
+    ".tiff": "image"
+}
 
-    if not is_supported_file(str(file_path)):
-        raise ValueError(f"Unsupported file type: {file_path.suffix}")
+def process_file(file_path: str, document_name: str, user_id: str) -> List[Dict]:
+    """
+    Routes the file to the correct parsing utility based on its type.
+    Handles normal PDFs, scanned PDFs, DOCX, and image files.
+    Returns:
+        List[Dict]: Parsed paragraphs with metadata.
+    """
+    try:
+        ext = Path(file_path).suffix.lower()
 
-    # Ensure user storage directory exists
-    user_storage = Path(STORAGE_DIR) / sanitize_filename(user_id)
-    ensure_dir(str(user_storage))
+        if ext not in SUPPORTED_FILE_TYPES:
+            logger.error(f"Unsupported file type: {ext} for {document_name}")
+            raise ValueError(f"Unsupported file type: {ext}")
 
-    # Copy original file to user-specific storage if not already there
-    file_hash = get_file_hash(str(file_path))
-    ext = file_path.suffix.lower()
-    sanitized_name = sanitize_filename(file_path.stem)
-    stored_file_name = f"{file_hash}_{sanitized_name}{ext}"
-    stored_path = user_storage / stored_file_name
+        file_type = SUPPORTED_FILE_TYPES[ext]
+        logger.info(f"Processing file: {document_name} as type: {file_type}")
 
-    if not stored_path.exists():
-        if file_path.resolve() != stored_path.resolve():
-            shutil.copy2(str(file_path), str(stored_path))
+        if file_type == "pdf":
+            parsed = parse_pdf(file_path, document_name, user_id)
 
-    # Process based on file type
-    if ext in ['.docx', '.doc']:
-        text_with_citations = docs_to_text_with_citaitons(str(stored_path), sanitized_name, user_id)
-    else:
-        # Convert to PDF if needed
-        converted_pdf_path = user_storage / f"{file_hash}_{sanitized_name}.pdf"
-        if ext in ['.jpg', '.jpeg', '.png', '.tiff', '.bmp', '.gif', '.webp']:
-            if not converted_pdf_path.exists():
-                convert_image_to_pdf(str(stored_path), str(converted_pdf_path))
-            pdf_path = str(converted_pdf_path)
-        elif ext == '.pdf':
-            pdf_path = str(stored_path)
+            if parsed and len(parsed) > 0:
+                logger.info(f"Successfully parsed normal PDF: {document_name} with {len(parsed)} paragraphs.")
+                return parsed
+            else:
+                logger.warning(f"No text found in PDF, falling back to OCR for: {document_name}")
+                parsed_ocr = parse_ocr_file(file_path, document_name, user_id)
+                logger.info(f"OCR parsed {len(parsed_ocr)} paragraphs from {document_name}")
+                return parsed_ocr
+
+        elif file_type == "docx":
+            parsed = parse_docx(file_path, document_name, user_id)
+            logger.info(f"Parsed {len(parsed)} paragraphs from DOCX: {document_name}")
+            return parsed
+
+        elif file_type == "image":
+            parsed = parse_ocr_file(file_path, document_name, user_id)
+            logger.info(f"Parsed {len(parsed)} paragraphs from image file: {document_name}")
+            return parsed
+
         else:
-            raise RuntimeError("Unsupported file format for conversion.")
+            logger.error(f"No parser defined for file type: {file_type}")
+            raise ValueError(f"No parser defined for file type: {file_type}")
 
-        # Extract citations from PDF
-        text_with_citations = extract_text_with_citations_from_pdf(pdf_path, sanitized_name, user_id)
-
-    return {
-        "user_id": user_id,
-        "file_hash": file_hash,
-        "file_path": str(stored_path),
-        "metadata": get_file_metadata(str(stored_path)),
-        "text_with_citations": text_with_citations,
-        "file_size": format_file_size(str(stored_path))
-    }
+    except Exception as e:
+        logger.exception(f"[MANAGER ERROR] Failed processing {document_name}: {e}")
+        return []

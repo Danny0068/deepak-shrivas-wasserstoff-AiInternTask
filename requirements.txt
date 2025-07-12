@@ -6,3 +6,4 @@ PyMuPDF
 pytesseract
 Pillow
 pytest 
+docling
